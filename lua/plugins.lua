@@ -35,6 +35,18 @@ return require('packer').startup(function(use)
   }
   -- movement --
   use "ggandor/leap.nvim"
+  -- surround --
+  use{
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+  }
+  -- multi file --
+  use { 'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    -- or                            , branch = '0.1.x',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
+  -- marks visualization --
+  use 'chentoast/marks.nvim'
   -- upspeed start time --
   -- use 'nathom/filetype.nvim'
   -- theme

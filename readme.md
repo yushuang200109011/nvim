@@ -6,8 +6,8 @@ Welcome to neovim configured by ysa!
 install git gcc cmake and add ssh keys to github
 ```bash
 git clone git@github.com:neovim/neovim.git 
-cd neovim && git checkout v0.9.1 && make CMAKE_BUILD_TYPE=RelWithDebInfo
-cd build && cpack -G DEB && sudo dpkg -i nvim-linux64.deb
+cd neovim && git checkout v0.9.4 && make CMAKE_BUILD_TYPE=Release
+sudo make install
 ```
 
 ### pull configs
