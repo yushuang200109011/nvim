@@ -83,3 +83,23 @@ require("marks").setup({
   mappings = {},
 })
 
+-- tabs
+vim.opt.termguicolors = true
+require("bufferline").setup {
+    options = {
+        -- use nvim internal-lsp
+        diagnostics = "nvim_lsp",
+        -- start tab from nvim-tree space
+        offsets = {{
+            filetype = "NvimTree",
+            text = "File Explorer",
+            highlight = "Directory",
+            text_align = "left"
+        }},
+
+        indicator = {
+            icon = '▎', -- this should be omitted if indicator style is not 'icon'
+            style = 'icon',
+        }
+    }
+}
