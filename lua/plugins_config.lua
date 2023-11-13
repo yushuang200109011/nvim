@@ -1,14 +1,6 @@
 -- empty setup using defaults
-require("nvim-tree").setup()
 -- plugins --
--- filetype --
--- require("filetype").setup({
---     overrides = {
---         extensions = {
---             h = "cpp",
---         },
---     }
--- })
+require("nvim-tree").setup()
 
 -- leap --
 require('leap').add_default_mappings()
@@ -103,3 +95,4 @@ require("bufferline").setup {
         }
     }
 }
+

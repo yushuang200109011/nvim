@@ -29,7 +29,7 @@ return require('packer').startup(function(use)
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
   -- file tree --
-  use{
+  use {
     "kyazdani42/nvim-tree.lua",
     requires = {"kyazdani42/nvim-web-devicons"}
   }
@@ -49,9 +49,16 @@ return require('packer').startup(function(use)
   }
   -- marks visualization --
   use 'chentoast/marks.nvim'
-  -- upspeed start time --
-  -- use 'nathom/filetype.nvim'
-  -- theme
+  -- nvim-cmp
+  use { 'neovim/nvim-lspconfig' }
+  use { 'hrsh7th/nvim-cmp', config = [[require('nvim-cmp_config')]] }
+  use { 'hrsh7th/cmp-nvim-lsp', after = 'nvim-cmp' }
+  use { 'hrsh7th/cmp-buffer', after = 'nvim-cmp' } -- buffer auto-completion
+  use { 'hrsh7th/cmp-path', after = 'nvim-cmp' } -- path auto-completion
+  use { 'hrsh7th/cmp-cmdline', after = 'nvim-cmp' } -- cmdline auto-completion
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+  -- theme --
   use 'navarasu/onedark.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim

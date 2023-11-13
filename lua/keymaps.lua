@@ -4,6 +4,8 @@ local map = vim.api.nvim_set_keymap
 -- reuse opt
 local opt = {noremap = true, silent = true }
 local nnoremap = {noremap = false, silent = false }
+-- plugin keymap --
+local pluginKeys = {}
 
 -- movement
 map("", "<C-h>", "^", nnoremap)
