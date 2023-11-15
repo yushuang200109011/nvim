@@ -2,7 +2,7 @@
 Welcome to neovim configured by ysa!
 
 ## Install
-Make sure the terminal can access https://github.com.
+Make sure the terminal can access github, apt server and pypi server
 
 ### Install Nvim
 install git gcc cmake and add ssh keys to github
@@ -10,6 +10,9 @@ install git gcc cmake and add ssh keys to github
 git clone git@github.com:neovim/neovim.git 
 cd neovim && git checkout v0.9.4 && make CMAKE_BUILD_TYPE=Release
 sudo make install
+sudo apt-get update
+sudo apt-get install python3-venv
+sudo apt-get install nodejs npm
 ```
 
 ### Pull Configs

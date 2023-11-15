@@ -1,6 +1,10 @@
 -- empty setup using defaults
 -- plugins --
 require("nvim-tree").setup()
+-- auto close
+-- vim.cmd([[
+--   autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif
+-- ]])
 
 -- leap --
 require('leap').add_default_mappings()
@@ -95,4 +99,3 @@ require("bufferline").setup {
         }
     }
 }
-
