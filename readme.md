@@ -11,8 +11,18 @@ git clone git@github.com:neovim/neovim.git
 cd neovim && git checkout v0.9.4 && make CMAKE_BUILD_TYPE=Release
 sudo make install
 sudo apt-get update
-sudo apt-get install python3-venv
-sudo apt-get install nodejs npm
+sudo apt-get install python3-venv # install venv
+
+# install nodejs and npm
+sudo apt-get update
+sudo apt-get install -y ca-certificates curl gnupg
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+
+NODE_MAJOR=18 # for ubuntu1804, use 16
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+sudo apt-get update
+sudo apt-get install nodejs -y
 ```
 
 ### Pull Configs
@@ -28,6 +38,7 @@ git clone git@github.com:yushuang20010911/nvim.git
 nvim
 :PackerSync
 # then quit and start nvim until stable
+# if cmake-lsp cannot installed automatically on Ubuntu1804, use "MasonInstall cmake-language-server@0.1.5" to install manually
 ```
 
 ### Install Fonts
