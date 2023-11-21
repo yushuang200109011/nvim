@@ -14,7 +14,6 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- My plugins here
-  
   -- hightlight
   use {
     'nvim-treesitter/nvim-treesitter',
@@ -42,14 +41,15 @@ return require('packer').startup(function(use)
     "kylechui/nvim-surround",
     tag = "*", -- Use for stability; omit to use `main` branch for the latest features
   }
-  -- multi file --
+  -- tabs --
   use { 'nvim-telescope/telescope.nvim', branch = '0.1.x',
     -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  -- terminal --
+  use {"akinsho/toggleterm.nvim", tag = '*'}
   -- marks visualization --
   use 'chentoast/marks.nvim'
-
   -- nvim-cmp
   use 'neovim/nvim-lspconfig'
   -- use { 'hrsh7th/nvim-cmp', config = [[require('nvim-cmp_config')]] }
@@ -64,6 +64,7 @@ return require('packer').startup(function(use)
   -- lsp --
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
+
   -- theme --
   use 'navarasu/onedark.nvim'
 

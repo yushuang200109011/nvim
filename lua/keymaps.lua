@@ -33,3 +33,12 @@ map("n", "<C-x>", ":BufferLinePickClose<CR>", opt)
 
 -- search file --
 map("n", "<C-p>", ":Telescope find_files<CR>", opt)
+
+-- terminal --
+map("n", "<C-t>", ":ToggleTerm<CR>", opt)
+map('t', '<esc>', [[<C-\><C-n>]], opt)
+map('t', '<C-h>', [[<Cmd>wincmd h<CR>]], opt)
+map('t', '<C-j>', [[<Cmd>wincmd j<CR>]], opt)
+map('t', '<C-k>', [[<Cmd>wincmd k<CR>]], opt)
+map('t', '<C-l>', [[<Cmd>wincmd l<CR>]], opt)
+map('t', '<C-w>', [[<C-\><C-n><C-w>]], opt)
