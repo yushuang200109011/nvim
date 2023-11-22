@@ -83,6 +83,7 @@ require("marks").setup({
 vim.opt.termguicolors = true
 require("bufferline").setup {
     options = {
+        mode = "buffers",
         -- use nvim internal-lsp
         diagnostics = "nvim_lsp",
         -- start tab from nvim-tree space
@@ -95,8 +96,17 @@ require("bufferline").setup {
 
         indicator = {
             icon = '▎', -- this should be omitted if indicator style is not 'icon'
+            -- icon = '|', -- this should be omitted if indicator style is not 'icon'
             style = 'icon',
-        }
+        },
+        color_icons = true,
+        get_element_icon = function(element)
+          local icon, hl = require('nvim-web-devicons').get_icon_by_filetype(element.filetype, { default = false })
+          return icon, hl
+        end,
+        show_buffer_icons = true,
+        separator_style = "slant"
+
     }
 }
 

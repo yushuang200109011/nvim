@@ -42,7 +42,7 @@ vim.o.showmode = false -- we are experienced, wo don't need the "-- INSERT --" m
 -- vim.opt.termguicolors = true
 
 -- Searching
-vim.o.incsearch = true -- search as characters are entered
+vim.o.incsearch = false -- search as characters are entered
 vim.o.hlsearch = true -- do not highlight matches
 vim.o.ignorecase = true -- ignore case in searches by default
 vim.o.smartcase = true -- but make it case sensitive if an uppercase is entered

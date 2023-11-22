@@ -22,6 +22,8 @@ return require('packer').startup(function(use)
        ts_update()
      end,
   }
+  -- icon
+  use "kyazdani42/nvim-web-devicons"
   -- line
   use {
     'nvim-lualine/lualine.nvim',
