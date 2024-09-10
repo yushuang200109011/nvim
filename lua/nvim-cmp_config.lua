@@ -85,7 +85,7 @@ require("mason-lspconfig").setup({
   -- A list of servers to automatically install if they're not already installed. Example: { "rust_analyzer@nightly", "lua_ls" }
   -- This setting has no relation with the `automatic_installation` setting.
   ---@type string[]
-  ensure_installed = {"clangd", "cmake", "lua_ls", "tsserver", "marksman"},
+  ensure_installed = {"clangd", "cmake", "lua_ls", "ts_ls", "marksman"},
 
   -- Whether servers that are set up (via lspconfig) should be automatically installed if they're not already installed.
   -- This setting has no relation with the `ensure_installed` setting.
@@ -118,7 +118,7 @@ require("mason-lspconfig").setup_handlers {
 }
 
 local lspconfig = require('lspconfig')
-lspconfig['tsserver'].setup({})
+lspconfig['ts_ls'].setup({})
 lspconfig['lua_ls'].setup({}) -- default config for lua
 lspconfig['clangd'].setup({})
 lspconfig['cmake'].setup({})
