@@ -29,7 +29,7 @@ sudo apt-get install nodejs -y
 ```bash
 # if no .config directory, create one
 cd ~/.config
-git clone git@github.com:yushuang20010911/nvim.git
+git clone git@github.com:yushuang200109011/nvim.git
 ```
 
 ### Apply Configs
